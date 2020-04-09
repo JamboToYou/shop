@@ -18,6 +18,7 @@ namespace SampleService.models
 
         [DataMember]
         public string itemName { get; set; }
+
         [DataMember]
         public int itemPrice { get; set; }
     }
