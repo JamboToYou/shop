@@ -25,8 +25,8 @@ namespace shop_svc
 
 			// build and run service host
 			new IpcServiceHostBuilder(services.BuildServiceProvider())
-				.AddNamedPipeEndpoint<ICalculatorService>(name: "endpoint1", pipeName: "pipeName")
-				.AddTcpEndpoint<ICalculatorService>(name: "endpoint2", ipEndpoint: IPAddress.Loopback, port: 45684)
+				.AddNamedPipeEndpoint<ICalculatorService>(name: "localhost", pipeName: "pipeName")
+				.AddTcpEndpoint<ICalculatorService>(name: "localhost", ipEndpoint: IPAddress.Loopback, port: 45684)
 				.Build()
 				.Run();
 		}
